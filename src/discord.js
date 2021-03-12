@@ -31,7 +31,8 @@ function createEmbed(repo, branch, url, commits, size, report) {
         .setDescription(`There are \`${size}\` new changes.\nBot: [${botName}](${botLink})`)
         .addField(`Changes`, getChangeLog(commits, size))
         .setTimestamp(Date.parse(latest.timestamp))
-        .setFooter(`Changes made by @JBTech-JT`)
+        .setThumbnail("https://media.discordapp.net/attachments/819541457186062340/819869240131584020/notifier.png")
+        .setFooter(`Changes made by @JBTech-JT`, "https://media.discordapp.net/attachments/819541457186062340/819869240131584020/notifier.png")
 
     if (report.tests.length > 0) {
         appendTestResults(embed, report)
