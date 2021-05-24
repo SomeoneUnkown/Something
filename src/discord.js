@@ -24,10 +24,10 @@ function createEmbed(repo, branch, url, commits, size, report) {
     var botLink = getInviteLink(botName)
 
     var embed = new discord.RichEmbed()
-        .setColor("#63b6f3")
+        .setColor("#0085e2")
         //.setTitle(size + (size == 1 ? " Commit was " : " Commits were ") + "added to " + repo + " (" + branch + ")")
         // .setTitle(size + (size == 1 ? " commit was " : " commits were ") + "added to " + branch)
-        .setAuthor(`Bot Changelog`, "https://media.discordapp.net/attachments/819541457186062340/819869240131584020/notifier.png")
+        .setAuthor(`Bot Changelog`, "https://media.discordapp.net/attachments/752883208290566217/846506118405947422/jxb_bots_server_v2.png")
         .setDescription(`There are \`${size}\` new changes.\nBot: [${botName}](${botLink})`)
         .addField(`Changes`, getChangeLog(commits, size))
         .setTimestamp(Date.parse(latest.timestamp))
